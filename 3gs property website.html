@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Us – 3GS Luxury Property</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #B89A5A;
+    --gold-light: #D4B97A;
+    --gold-pale: #F5EDD8;
+    --ink: #1A1612;
+    --ink-soft: #3D3530;
+    --smoke: #F8F6F2;
+    --linen: #EDE8DE;
+    --mist: #9A9088;
+    --white: #FFFFFF;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--white);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 60px;
+    border-bottom: 0.5px solid var(--linen);
+    background: var(--white);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mist);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a.active { color: var(--ink); }
+
+  /* HERO */
+  .hero {
+    background: var(--ink);
+    padding: 120px 60px 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: end;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 380px; height: 100%;
+    background: linear-gradient(135deg, rgba(184,154,90,0.08) 0%, rgba(184,154,90,0.02) 100%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 0.5px;
+    background: var(--gold);
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--white);
+    letter-spacing: -0.01em;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+  .hero-right {
+    padding-bottom: 8px;
+  }
+  .hero-desc {
+    font-size: 14px;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.55);
+    font-weight: 300;
+    margin-bottom: 40px;
+    max-width: 380px;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 48px;
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--gold-light);
+    display: block;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mist);
+    margin-top: 6px;
+    display: block;
+  }
+
+  /* GOLD DIVIDER */
+  .gold-rule {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 0 60px;
+  }
+
+  /* STORY SECTION */
+  .story {
+    padding: 100px 60px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 0.5px;
+    background: var(--linen);
+  }
+  .story-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+  .story-body {
+    font-size: 14px;
+    line-height: 1.95;
+    color: var(--ink-soft);
+    font-weight: 300;
+  }
+  .story-body p + p { margin-top: 20px; }
+  .story-pull {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--gold);
+    border-left: 1.5px solid var(--gold-pale);
+    padding-left: 28px;
+    margin: 36px 0;
+    line-height: 1.55;
+  }
+
+  /* WHY CHOOSE US */
+  .benefits {
+    background: var(--smoke);
+    padding: 100px 60px;
+  }
+  .benefits-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 64px;
+    align-items: end;
+  }
+  .benefits-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px;
+    font-weight: 300;
+    line-height: 1.15;
+  }
+  .benefits-intro {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--mist);
+    font-weight: 300;
+    padding-top: 8px;
+  }
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .benefit-card {
+    background: var(--white);
+    padding: 48px 40px;
+    position: relative;
+    transition: background 0.3s;
+  }
+  .benefit-card:hover { background: var(--ink); }
+  .benefit-card:hover .benefit-title,
+  .benefit-card:hover .benefit-desc { color: rgba(255,255,255,0.9); }
+  .benefit-card:hover .benefit-desc { color: rgba(255,255,255,0.5); }
+  .benefit-card:hover .benefit-num { color: rgba(184,154,90,0.2); }
+  .benefit-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 300;
+    color: var(--linen);
+    line-height: 1;
+    margin-bottom: 24px;
+    transition: color 0.3s;
+  }
+  .benefit-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 14px;
+    transition: color 0.3s;
+  }
+  .benefit-desc {
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--mist);
+    font-weight: 300;
+    transition: color 0.3s;
+  }
+  .benefit-accent {
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  /* VALUES */
+  .values {
+    padding: 100px 60px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .values-list {
+    list-style: none;
+    border-top: 0.5px solid var(--linen);
+  }
+  .values-list li {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 28px 0;
+    border-bottom: 0.5px solid var(--linen);
+  }
+  .value-icon {
+    width: 44px;
+    height: 44px;
+    border: 0.5px solid var(--gold-pale);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .value-icon svg { width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; }
+  .value-text strong {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+  .value-text span {
+    font-size: 13px;
+    color: var(--mist);
+    font-weight: 300;
+    line-height: 1.7;
+  }
+  .values-aside {
+    background: var(--ink);
+    padding: 56px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .values-aside::after {
+    content: '"';
+    position: absolute;
+    bottom: -20px;
+    right: 24px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 200px;
+    font-weight: 300;
+    color: rgba(184,154,90,0.08);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .aside-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--white);
+    margin-bottom: 28px;
+  }
+  .aside-attr {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* CTA */
+  .cta-strip {
+    background: var(--gold);
+    padding: 64px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  .cta-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .cta-btn {
+    flex-shrink: 0;
+    background: var(--ink);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 18px 40px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.25s;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .cta-btn:hover { background: var(--ink-soft); }
+
+  /* FOOTER */
+  footer {
+    padding: 40px 60px;
+    border-top: 0.5px solid var(--linen);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: var(--mist);
+  }
+  .footer-copy {
+    font-size: 11px;
+    color: var(--linen);
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 20px 24px; }
+    .nav-links { display: none; }
+    .hero { padding: 80px 24px 60px; grid-template-columns: 1fr; gap: 48px; }
+    .hero-title { font-size: 48px; }
+    .gold-rule { margin: 0 24px; }
+    .story { padding: 64px 24px; grid-template-columns: 1fr; gap: 40px; }
+    .benefits { padding: 64px 24px; }
+    .benefits-header { grid-template-columns: 1fr; gap: 24px; }
+    .benefits-grid { grid-template-columns: 1fr; gap: 2px; }
+    .values { padding: 64px 24px; grid-template-columns: 1fr; gap: 48px; }
+    .cta-strip { padding: 48px 24px; flex-direction: column; align-items: flex-start; }
+    .cta-text { font-size: 26px; }
+    footer { padding: 28px 24px; flex-direction: column; gap: 12px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">3GS <span>Luxury</span> Property</div>
+  <ul class="nav-links">
+    <li><a href="#">Properties</a></li>
+    <li><a href="#" class="active">About</a></li>
+    <li><a href="#">Locations</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">About 3GS</div>
+    <h1 class="hero-title">Where every stay<br>feels like <em>home</em></h1>
+  </div>
+  <div class="hero-right">
+    <p class="hero-desc">We curate and manage exceptional serviced accommodation across the UK — designed for those who expect more than four walls and a bed.</p>
+    <div class="hero-stats">
+      <div>
+        <span class="stat-num">50+</span>
+        <span class="stat-label">Properties</span>
+      </div>
+      <div>
+        <span class="stat-num">98%</span>
+        <span class="stat-label">Guest satisfaction</span>
+      </div>
+      <div>
+        <span class="stat-num">5★</span>
+        <span class="stat-label">Average rating</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<!-- STORY -->
+<section class="story">
+  <div>
+    <div class="section-label">Our story</div>
+    <h2 class="story-heading">Built on a belief that guests deserve better</h2>
+  </div>
+  <div>
+    <div class="story-body">
+      <p>3GS Luxury Property was founded with a singular conviction: that short-term accommodation should never mean compromise. Whether you're relocating for work, exploring a new city, or simply seeking a retreat that matches your standards, every detail of your stay should feel considered, curated, and cared for.</p>
+      <blockquote class="story-pull">We don't just manage properties — we craft experiences that guests remember long after checkout.</blockquote>
+      <p>From our first property to our growing portfolio spanning the UK's most sought-after locations, we have remained true to our founding principles: exceptional spaces, impeccable service, and a genuine commitment to making every guest feel at home — only better.</p>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<!-- WHY CHOOSE US -->
+<section class="benefits">
+  <div class="benefits-header">
+    <div>
+      <div class="section-label">Why choose us</div>
+      <h2 class="benefits-heading">The 3GS difference,<br>in every detail</h2>
+    </div>
+    <p class="benefits-intro">We hold ourselves to a standard most accommodation simply doesn't pursue. Here's what sets 3GS guests apart from the moment they arrive to the moment they leave.</p>
+  </div>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <div class="benefit-num">01</div>
+      <div class="benefit-accent"></div>
+      <h3 class="benefit-title">Premium interiors</h3>
+      <p class="benefit-desc">Every property is designed and furnished to a luxury standard — hotel-quality bedding, curated décor, and spaces that feel genuinely beautiful, not generic.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-num">02</div>
+      <div class="benefit-accent"></div>
+      <h3 class="benefit-title">Seamless check-in</h3>
+      <p class="benefit-desc">Keyless entry, digital guides, and round-the-clock guest support mean your arrival is effortless — no waiting, no hassle, no compromise.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-num">03</div>
+      <div class="benefit-accent"></div>
+      <h3 class="benefit-title">Fully equipped</h3>
+      <p class="benefit-desc">From professional-grade kitchens to high-speed Wi-Fi and streaming services, our properties provide everything needed for short or extended stays.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-num">04</div>
+      <div class="benefit-accent"></div>
+      <h3 class="benefit-title">Prime locations</h3>
+      <p class="benefit-desc">Carefully chosen addresses across the UK's most desirable cities and neighbourhoods — close to transport links, dining, and cultural landmarks.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-num">05</div>
+      <div class="benefit-accent"></div>
+      <h3 class="benefit-title">Dedicated support</h3>
+      <p class="benefit-desc">A responsive team available before, during, and after your stay. When something matters, you speak to a person — not a chatbot.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-num">06</div>
+      <div class="benefit-accent"></div>
+      <h3 class="benefit-title">Transparent pricing</h3>
+      <p class="benefit-desc">No hidden fees, no unpleasant surprises. The price you see reflects the quality you receive — and the value of a truly stress-free stay.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div>
+    <div class="section-label">Our values</div>
+    <ul class="values-list">
+      <li>
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="value-text">
+          <strong>Uncompromising quality</strong>
+          <span>We set the bar high and hold it there — in every property, every interaction, every stay.</span>
+        </div>
+      </li>
+      <li>
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M12 12h.01"/></svg>
+        </div>
+        <div class="value-text">
+          <strong>Integrity in everything</strong>
+          <span>Honest pricing, clear communication, and genuine accountability — because trust is our most valuable currency.</span>
+        </div>
+      </li>
+      <li>
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="value-text">
+          <strong>Guest-first always</strong>
+          <span>Your comfort, convenience, and satisfaction drive every decision we make, from the properties we choose to the amenities we provide.</span>
+        </div>
+      </li>
+      <li>
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="value-text">
+          <strong>Care for community</strong>
+          <span>We invest thoughtfully in the neighbourhoods we operate in, working with local suppliers and respecting the communities around us.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="values-aside">
+    <p class="aside-quote">Luxury isn't a price point — it's the feeling of knowing every detail has been thought of before you even arrived.</p>
+    <span class="aside-attr">The 3GS philosophy</span>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <p class="cta-text">Ready to experience the 3GS difference for yourself?</p>
+  <a href="#" class="cta-btn">Browse our properties</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">3GS Luxury Property</div>
+  <div class="footer-copy">© 2026 3GS Luxury Property. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
