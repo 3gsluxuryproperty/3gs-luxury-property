@@ -1,0 +1,9 @@
+{
+  "name": "3gs-luxury-property-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "3GS Luxury Property — serviced accommodation site with Stripe-powered direct booking",
+  "dependencies": {
+    "stripe": "^16.0.0"
+  }
+}

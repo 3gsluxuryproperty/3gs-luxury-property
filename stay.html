@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Stay — Spacious 3BR Garden Retreat, Shepherd's Bush | 3GS Luxury Property</title>
+<meta name="description" content="Reserve this 3-bedroom Shepherd's Bush garden retreat directly with 3GS Luxury Property. Real-time pricing, secure card payment, no booking-platform mark-up.">
+<link rel="icon" href="images/logo.jpeg">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="images/logo.jpeg" alt="3GS Luxury Property logo" class="brand-mark">3GS Luxury Property</a>
+    <div class="nav-links">
+      <a href="the-offer.html">For Landlords</a>
+      <a href="stay.html" style="color:var(--brass-bright);">Book a Stay</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="#reserve" class="nav-cta">Reserve Now</a>
+  </div>
+</nav>
+
+<header class="section-ink" style="padding-bottom:0;">
+  <div class="wrap">
+    <span class="eyebrow">Current Listing · ★ 4.75 (8 reviews)</span>
+    <h1 class="mt-24">Spacious 3BR Garden Retreat, Shepherd's Bush</h1>
+    <p class="lede mt-16">A stylish 3-bedroom flat in the heart of Shepherd's Bush, moments from Westfield and excellent transport links — equally suited to families, groups of friends, or business travellers. <a href="https://www.airbnb.co.uk/rooms/1669490677416482699" target="_blank" rel="noopener" style="color:var(--brass-bright); text-decoration:underline;">View the original Airbnb listing</a>.</p>
+  </div>
+
+  <div class="wrap mt-32" style="padding-bottom:0;">
+    <div class="gallery">
+      <img class="gallery-main" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1669490677416482699/original/9fba3a90-63d6-4197-9890-f8bdf22c6dbe.jpeg?im_w=1200" alt="Living space at the Shepherd's Bush garden retreat">
+      <div class="gallery-side">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1669490677416482699/original/cdda3dc4-f57b-49af-b9d0-e3b57806656f.jpeg?im_w=700" alt="Bedroom at the Shepherd's Bush garden retreat">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1669490677416482699/original/f7a7eae0-3501-4753-b870-d15ca4757673.jpeg?im_w=700" alt="Kitchen at the Shepherd's Bush garden retreat">
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .gallery {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 12px;
+  }
+  .gallery-main { height: 480px; width: 100%; object-fit: cover; }
+  .gallery-side { display: grid; grid-template-rows: 1fr 1fr; gap: 12px; }
+  .gallery-side img { height: 234px; width: 100%; object-fit: cover; }
+  @media (max-width: 780px) {
+    .gallery { grid-template-columns: 1fr; }
+    .gallery-main { height: 280px; }
+    .gallery-side { grid-template-columns: 1fr 1fr; grid-template-rows: none; }
+    .gallery-side img { height: 160px; }
+  }
+</style>
+
+<!-- DETAILS + BOOKING -->
+<section class="section-ink" id="reserve">
+  <div class="wrap details-grid">
+
+    <div class="details-col">
+      <div class="amenity-row">
+        <span class="tag-pill">8 guests</span>
+        <span class="tag-pill">3 bedrooms</span>
+        <span class="tag-pill">6 beds</span>
+        <span class="tag-pill">2 bathrooms</span>
+        <span class="tag-pill">Self check-in</span>
+      </div>
+
+      <h2 class="mt-32">The details</h2>
+      <p class="lede mt-16">This three-bedroom flat sits in one of West London's liveliest neighbourhoods, a short walk from Westfield Shopping Centre and with fast links into Central London. It's furnished and maintained by our team to the same standard we set for every home we manage, with self check-in so arrival is on your schedule, not ours.</p>
+
+      <div class="amenity-list mt-32">
+        <div class="amenity"><span>Fast wifi</span></div>
+        <div class="amenity"><span>Washing machine</span></div>
+        <div class="amenity"><span>Fully equipped kitchen</span></div>
+        <div class="amenity"><span>24/7 self check-in</span></div>
+        <div class="amenity"><span>Fresh linen &amp; towels</span></div>
+        <div class="amenity"><span>Dedicated workspace</span></div>
+        <div class="amenity"><span>Smart TV</span></div>
+        <div class="amenity"><span>On-call support</span></div>
+      </div>
+      <p class="lede mt-16" style="font-size:0.9rem;">Plus 34 more amenities — see the full list on the <a href="https://www.airbnb.co.uk/rooms/1669490677416482699" target="_blank" rel="noopener" style="color:var(--brass-bright); text-decoration:underline;">Airbnb listing</a> or ask us directly.</p>
+
+      <h3 class="mt-48">Good to know</h3>
+      <p class="lede mt-16" style="font-size:0.95rem;">Check-in after 3pm, check-out before 10am, 8 guests maximum. This home is managed directly by 3GS Luxury Property — booking here means no third-party service fee, and any questions before or during your stay go straight to our team.</p>
+
+      <h3 class="mt-48">Availability</h3>
+      <p class="lede mt-16" style="font-size:0.95rem;">The calendar below is kept in sync with our Airbnb listing, so dates already booked there won't be double-booked here.</p>
+      <div id="availability-status" class="lede mt-16" style="font-size:0.9rem;">Checking live availability…</div>
+      <div id="unavailable-list" class="unavailable-list mt-16"></div>
+    </div>
+
+    <!-- RESERVATION CARD -->
+    <aside class="ticket">
+      <div class="ticket-top">
+        <div class="ticket-price">
+          <span class="ticket-amount" id="nightlyRateDisplay">£145</span>
+          <span class="ticket-unit">/ night</span>
+        </div>
+
+        <form id="booking-form" class="mt-24">
+          <div class="field-row">
+            <label>
+              <span>Check-in</span>
+              <input type="date" id="checkin" required>
+            </label>
+            <label>
+              <span>Check-out</span>
+              <input type="date" id="checkout" required>
+            </label>
+          </div>
+          <label class="mt-16">
+            <span>Guests</span>
+            <select id="guests">
+              <option value="1">1 guest</option>
+              <option value="2" selected>2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5">5 guests</option>
+              <option value="6">6 guests</option>
+              <option value="7">7 guests</option>
+              <option value="8">8 guests</option>
+            </select>
+          </label>
+
+          <div class="rule mt-24" style="border-top:1px dashed var(--ink-line);"></div>
+
+          <div id="price-breakdown" class="price-breakdown mt-24" hidden>
+            <div class="price-row"><span id="rate-line">£145 x 1 night</span><span id="rate-total">£145</span></div>
+            <div class="price-row"><span>Cleaning fee</span><span id="cleaning-fee">£45</span></div>
+            <div class="price-row price-total"><span>Total</span><span id="grand-total">£190</span></div>
+          </div>
+
+          <label class="mt-24">
+            <span>Full name</span>
+            <input type="text" id="guest-name" placeholder="Your name" required>
+          </label>
+          <label class="mt-16">
+            <span>Email</span>
+            <input type="email" id="guest-email" placeholder="you@example.com" required>
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-block mt-24" id="reserve-btn">Reserve &amp; Pay</button>
+          <p class="ticket-note mt-16" id="booking-status">You won't be charged until you confirm on the next screen.</p>
+        </form>
+      </div>
+
+      <div class="ticket-perforation" aria-hidden="true"></div>
+
+      <div class="ticket-bottom">
+        <div class="stub-row"><span>Property</span><span>Garden Retreat, Shepherd's Bush</span></div>
+        <div class="stub-row"><span>Location</span><span>Shepherd's Bush, London</span></div>
+        <div class="stub-row"><span>Hosted by</span><span>3GS Luxury Property</span></div>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<style>
+  .details-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+  @media (max-width: 900px) { .details-grid { grid-template-columns: 1fr; } }
+
+  .amenity-row { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  .amenity-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 24px;
+  }
+  .amenity {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--ink-line);
+    font-size: 14.5px;
+    color: var(--ivory-dim);
+  }
+
+  .ticket {
+    position: sticky;
+    top: 110px;
+    background: var(--paper);
+    color: var(--ink);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .ticket-top, .ticket-bottom { padding: 32px; }
+  .ticket-amount { font-family: var(--font-display); font-size: 2rem; }
+  .ticket-unit { font-size: 13px; color: var(--slate); margin-left: 6px; }
+
+  .ticket-perforation {
+    position: relative;
+    height: 0;
+    border-top: 1px dashed rgba(20,24,28,0.25);
+  }
+  .ticket-perforation::before, .ticket-perforation::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 20px; height: 20px;
+    background: var(--ink);
+    border-radius: 50%;
+  }
+  .ticket-perforation::before { left: -10px; }
+  .ticket-perforation::after { right: -10px; }
+
+  .ticket-bottom { background: rgba(20,24,28,0.03); }
+  .stub-row {
+    display: flex; justify-content: space-between;
+    font-size: 13px; color: var(--slate);
+    padding: 6px 0;
+  }
+
+  #booking-form label { display: block; font-size: 12.5px; color: var(--slate); font-weight: 600; margin-bottom: 6px; }
+  #booking-form input, #booking-form select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid rgba(20,24,28,0.18);
+    border-radius: 2px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    background: #fff;
+    color: var(--ink);
+  }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  .price-breakdown { font-size: 14px; }
+  .price-row { display: flex; justify-content: space-between; padding: 6px 0; color: var(--slate); }
+  .price-total { font-weight: 600; color: var(--ink); border-top: 1px solid rgba(20,24,28,0.14); margin-top: 6px; padding-top: 12px; }
+
+  .ticket-note { font-size: 12px; color: var(--slate); text-align: center; }
+  .ticket-note.status-error { color: #a3453a; }
+  .ticket-note.status-ok { color: var(--success); }
+
+  #availability-status.status-ok { color: var(--success); }
+  #availability-status.status-error { color: var(--brass-bright); }
+
+  .unavailable-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .unavailable-list .range-pill {
+    font-size: 12.5px;
+    color: var(--ivory-dim);
+    border: 1px solid var(--ink-line);
+    border-radius: 999px;
+    padding: 6px 14px;
+  }
+</style>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="brand"><img src="images/logo.jpeg" alt="3GS Luxury Property logo" class="brand-mark">3GS Luxury Property</div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Site</h4>
+          <a href="index.html">Home</a>
+          <a href="the-offer.html">For Landlords</a>
+          <a href="stay.html">Book a Stay</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p><a href="mailto:3gsluxuryproperty@gmail.com">3gsluxuryproperty@gmail.com</a></p>
+          <p><a href="tel:+447577114414">07577 114414</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 3GS Luxury Property Ltd. All rights reserved.</span>
+      <span>London, United Kingdom</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/booking.js"></script>
+</body>
+</html>

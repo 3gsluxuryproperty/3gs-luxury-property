@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — 3GS Luxury Property</title>
+<meta name="description" content="Get in touch with 3GS Luxury Property about a landlord agreement, a current stay, or general enquiries.">
+<link rel="icon" href="images/logo.jpeg">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="images/logo.jpeg" alt="3GS Luxury Property logo" class="brand-mark">3GS Luxury Property</a>
+    <div class="nav-links">
+      <a href="the-offer.html">For Landlords</a>
+      <a href="stay.html">Book a Stay</a>
+      <a href="contact.html" style="color:var(--brass-bright);">Contact</a>
+    </div>
+    <a href="stay.html" class="nav-cta">Check Availability</a>
+  </div>
+</nav>
+
+<header class="section-ink" style="padding-bottom:0;">
+  <div class="wrap">
+    <span class="eyebrow">Get in touch</span>
+    <h1 class="mt-24">Tell us what you need, and who you are.</h1>
+    <p class="lede mt-24">Landlord enquiry, guest question, or something else — this reaches our team directly, not a call centre.</p>
+  </div>
+</header>
+
+<section class="section-ink">
+  <div class="wrap grid-2">
+    <div>
+      <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+        <label class="field">
+          <span>I am a…</span>
+          <select name="enquiry_type" required>
+            <option value="landlord">Landlord — I have a property to discuss</option>
+            <option value="guest">Guest — I have a question about a stay</option>
+            <option value="other">Something else</option>
+          </select>
+        </label>
+
+        <div class="field-pair mt-16">
+          <label class="field">
+            <span>Full name</span>
+            <input type="text" name="name" required>
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" required>
+          </label>
+        </div>
+
+        <label class="field mt-16">
+          <span>Phone (optional)</span>
+          <input type="tel" name="phone">
+        </label>
+
+        <label class="field mt-16">
+          <span>Message</span>
+          <textarea name="message" rows="5" placeholder="Property address and a little context, or your question about a stay" required></textarea>
+        </label>
+
+        <button type="submit" class="btn btn-primary mt-24">Send message</button>
+        <p class="lede mt-16" style="font-size:13px;">We reply within one working day.</p>
+      </form>
+    </div>
+
+    <div>
+      <div class="info-card">
+        <h3>Direct contact</h3>
+        <p class="lede mt-16"><a href="mailto:3gsluxuryproperty@gmail.com">3gsluxuryproperty@gmail.com</a></p>
+        <p class="lede"><a href="tel:+447577114414">07577 114414</a></p>
+        <hr class="rule mt-24">
+        <h3 class="mt-24">Landlord enquiries</h3>
+        <p class="lede mt-16">Send us the property address and roughly what you're currently achieving in rent — we'll come back with a proposed fixed monthly figure and term.</p>
+        <hr class="rule mt-24">
+        <h3 class="mt-24">Guest enquiries</h3>
+        <p class="lede mt-16">Already booked? Reply directly to your confirmation email for the fastest response.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .field { display: block; margin-bottom: 4px; }
+  .field span { display:block; font-size:12.5px; font-weight:600; color: var(--ivory-dim); margin-bottom:6px; }
+  .field input, .field select, .field textarea {
+    width: 100%;
+    padding: 12px 14px;
+    background: var(--ink-soft);
+    border: 1px solid var(--ink-line);
+    border-radius: 2px;
+    color: var(--ivory);
+    font-family: var(--font-body);
+    font-size: 14px;
+  }
+  .field textarea { resize: vertical; }
+  .field-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 560px) { .field-pair { grid-template-columns: 1fr; } }
+
+  .info-card {
+    border: 1px solid var(--ink-line);
+    padding: 36px;
+  }
+</style>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="brand"><img src="images/logo.jpeg" alt="3GS Luxury Property logo" class="brand-mark">3GS Luxury Property</div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Site</h4>
+          <a href="index.html">Home</a>
+          <a href="the-offer.html">For Landlords</a>
+          <a href="stay.html">Book a Stay</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p><a href="mailto:3gsluxuryproperty@gmail.com">3gsluxuryproperty@gmail.com</a></p>
+          <p><a href="tel:+447577114414">07577 114414</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 3GS Luxury Property Ltd. All rights reserved.</span>
+      <span>London, United Kingdom</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
